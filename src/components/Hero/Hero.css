@@ -1,0 +1,39 @@
+.hero-page {
+	height: 100vh;
+}
+.hero-container {
+	background-image: url("../../assets/images/hero-bg.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero-content {
+	width: 80%;
+	height: fit-content;
+}
+
+.hero-name {
+	width: 70%;
+}
+/* @media (max-width: 767px) {
+	.hero-content {
+		width: 70%;
+		height: fit-content;
+		background-color: white;
+	}
+    .hero-container{
+        background-image: url("../../assets/images/hero-bg03.jpg");
+    }
+}
+@media (max-width: 768px) {
+	.hero-content {
+		width: 100%;
+		height: fit-content;
+	}
+} */

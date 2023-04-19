@@ -1,0 +1,27 @@
+.social-icon {
+	text-decoration: none;
+	color: gray;
+	display: inline-block;
+	margin: 10px 10px;
+	font-size: medium;
+}
+.linkedin:hover {
+	color: #0077b5;
+}
+.github:hover {
+	color: black;
+}
+.instagram:hover {
+	color: #e1306c;
+}
+.social-icon:hover {
+	transform: rotate(30deg);
+}
+.skill-icon {
+	filter: grayscale(1);
+	transition: all 1s;
+}
+
+.skill-icon:hover {
+	filter: grayscale(0);
+}

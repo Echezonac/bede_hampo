@@ -1,0 +1,21 @@
+.about-page {
+	background-image: url("../../assets/images/about-bg.svg");
+	height: fit-content;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	align-items: center;
+}
+.about-content {
+	width: 68%;
+}
+
+@media (max-width: 768px) {
+	.about-content {
+		width: 90%;
+	}
+	.about-page {
+		justify-content: center;
+	}
+}

@@ -1,0 +1,160 @@
+/* Abril fonts */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+/* Poppins font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap");
+/* Rubit font */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+::root {
+	--hFont: "Abril Fatface", cursive;
+	--subFont: "Poppins", sans-serif;
+	--pFont: "Rubik", sans-serif;
+	--altFont: "Hanken Grotesk", sans-serif;
+	--drkColor: #333333;
+	--blkColor: #000000;
+	--maroonColor: #850000;
+	--ltColor: #ffffff;
+	--txtColor: #282828;
+}
+
+* {
+	font-style: normal;
+}
+
+::-webkit-scrollbar {
+	width: 2px;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--ltColor);
+}
+
+p {
+	font-weight: 400;
+	font-family: var(--pFont);
+}
+
+.hero-title {
+	font-weight: 400;
+	font-size: 4vw;
+	font-family: "Abril Fatface", cursive;
+
+	text-transform: uppercase;
+	background-image: linear-gradient(
+		-225deg,
+		#fff 0%,
+		#fff 29%,
+		#850000 67%,
+		#fff 100%
+	);
+	background-size: auto auto;
+	background-clip: border-box;
+	background-size: 200% auto;
+	color: #fff;
+	background-clip: text;
+	/* text-fill-color: transparent; */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: textclip 2s linear infinite;
+	display: inline-block;
+}
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+
+.sub-title {
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 42px;
+	color: var(--txtColor);
+	font-family: var(--hFont);
+}
+
+.nav-link-custom {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 21px;
+	color: var(--txtColor);
+	font-family: var(--hFont);
+}
+
+.nav-link-custom:hover {
+	color: var(--blkColor);
+	font-weight: 700;
+}
+
+.little-title {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 21px;
+	color: var(--txtColor);
+	font-family: var(--hFont);
+}
+
+.w-700 {
+	font-weight: 700;
+	letter-spacing: 5px;
+}
+
+.sub-heading {
+	font-family: "Abril Fatface", cursive;
+	font-weight: 600;
+}
+
+.black-text {
+	color: #000000;
+}
+
+.maroon-text {
+	color: #850000;
+}
+
+.white-text {
+	color: #fff;
+}
+
+.maroon-bg {
+	background-color: var(--maroonColor);
+}
+
+.white-bg {
+	background-color: var(--ltColor);
+}
+
+.custom-btn {
+	border-radius: 30px !important;
+	color: var(--drkColor) !important;
+	background: none;
+	border: 1px solid black;
+}
+.text-justify{
+	text-align: justify;
+}
+
+.left-justify{
+	text-align: left;
+}
+
+.custom-btn:hover {
+	background-color: #282828;
+	color: #ffffff !important;
+	border: none;
+}
+.custom-btn-1 {
+	border-radius: 30px !important;
+	color: white !important;
+	background: none;
+	border: 1px solid white;
+	text-decoration: none;
+}
+.custom-btn-1:hover {
+	background-color: white;
+	color: black !important;
+	border: none;
+}
+
+.custom-width{
+	width: fit-content !important;
+}

@@ -1,0 +1,29 @@
+.service-card {
+	width: 100%;
+	height: 280px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.inner-service-card{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.9;
+}
+.service-card-content{
+    width: 100%;
+    height: 100%;
+}
+.service-card-1{
+    background-image: url('../../../assets/images/service-bg-1.png');
+}
+.service-card-2{
+    background-image: url('../../../assets/images/service-bg-2.png');
+}
+.service-card-3{
+    background-image: url('../../../assets/images/service-bg-3.png');
+}
+.service-card-4{
+    background-image: url('../../../assets/images/service-bg-4.png');
+}
