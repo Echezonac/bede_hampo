@@ -59,7 +59,7 @@ const Header = () => {
 								data-bs-target="#navbarTogglerDemo02"
 							>
 								<AnchorLink
-									href="#works"
+									href="#projects"
 									className="nav-link nav-link-custom"
 									aria-current="page"
 								>

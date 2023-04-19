@@ -14,7 +14,7 @@ const About = () => {
 					<br /> for better experience.
 				</h3>
 			</div>
-			<div className="col-12 about-page mt-5 ps-xl-5 ps-sm-0 py-5">
+			<div className="col-12 about-page mt-5 ps-xl-5 ps-sm-0 py-5 mb-3">
 				<p className="about-content ms-xl-5 mx-sm-0 px-5 text-justify">
 					Being a full-stack engineer, I have worked with front-end and back-end
 					technologies. Programming languages are a strong suit of mine, and I

@@ -1,0 +1,13 @@
+.work-item{
+    height: fit-content;
+    padding: 20px;
+    min-width: 25rem;
+    box-shadow: 6px 10px 68px -33px rgba(0,0,0,0.15);
+    background-color: whitesmoke;
+}
+
+.work-item p{
+    text-align: justify;
+    font-size: medium;
+    /* letter-spacing: 2px; */
+}

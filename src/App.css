@@ -28,9 +28,13 @@
 	background: var(--ltColor);
 }
 
-p {
+p{
 	font-weight: 400;
 	font-family: var(--pFont);
+}
+.p {
+	font-weight: 400;
+	font-family: "Rubik", sans-serif;
 }
 
 .hero-title {
@@ -109,6 +113,10 @@ p {
 
 .maroon-text {
 	color: #850000;
+}
+
+.btn-maroon{
+	background-color: #850000 !important;
 }
 
 .white-text {
