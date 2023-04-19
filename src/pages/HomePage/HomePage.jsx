@@ -3,6 +3,7 @@ import Hero from "../../components/Hero/Hero";
 import About from "../../components/About/About";
 import Services from "../../components/Services/Services";
 import Project from "../../components/Projects/Project";
+import Footer from "../../components/Footer/Footer";
 
 const HomePage = () => {
   return (

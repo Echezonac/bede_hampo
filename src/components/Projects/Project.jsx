@@ -26,13 +26,13 @@ const Project = () => {
 				<h3 className="ps-5 sub-heading">
 					Some of my latest work <br /> that makes me proud
 				</h3>
-				<div className="filter-container ms-5 mt-2 sub-heading">
+				{/* <div className="filter-container ms-5 mt-2 sub-heading">
 					<span className="pointer">All</span> /{" "}
 					<span className="pointer">Tech</span> /{" "}
 					<span className="pointer">Archi</span> /{" "}
 					<span className="pointer">Consultant</span> /{" "}
 					<span className="pointer">Mentorship</span>
-				</div>
+				</div> */}
 			</div>
 			{/* work item start*/}
 			<div className="col-xl-10 col-lg-11 col-md-11 col-sm-12 mt-3 mx-auto carousel-container position-relative">
