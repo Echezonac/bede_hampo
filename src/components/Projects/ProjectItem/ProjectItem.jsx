@@ -4,7 +4,9 @@ import { Link } from "react-router-dom"
 const ProjectItem = ({ title, img, decription, category, url }) => {
 	return (
 		<div className="work-item">
-			<img src={img} alt={title} />
+			<div style={{height:"400px",width:"100%"}}>
+				<img src={img} alt={title} />
+			</div>
 			<h5 className="htitle fs-6 mt-3 d-flex align-items-center justify-content-between">
 				<span className="little-title fw-bold">{title}</span>{" "}
 				<small className="ms-5 btn btn-maroon text-light py-1 px-2 little-title">

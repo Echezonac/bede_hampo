@@ -1,7 +1,7 @@
 .work-item{
     height: fit-content;
     padding: 20px;
-    min-width: 25rem;
+    min-width: 30rem;
     box-shadow: 6px 10px 68px -33px rgba(0,0,0,0.15);
     background-color: whitesmoke;
 }
