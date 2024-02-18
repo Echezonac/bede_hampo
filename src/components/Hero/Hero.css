@@ -1,13 +1,13 @@
 .hero-page {
 	height: 100vh;
-}
-.hero-container {
 	background-image: url("../../assets/images/hero-bg.svg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+.hero-container-content{
 	height: 100%;
-	width: 100%;
+	/* width: 100%; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -37,3 +37,9 @@
 		height: fit-content;
 	}
 } */
+/* <h1 className='hero-title py-2 lh-sm'>
+						FUTURISTIC, UNIQUE AND SUSTAINABLE{" "}
+						<span className='maroon-text'>
+							SOLUTIONS...
+						</span>
+					</h1> */

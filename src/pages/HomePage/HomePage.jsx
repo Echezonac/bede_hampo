@@ -1,19 +1,18 @@
 import Hero from "../../components/Hero/Hero";
-// import WorkFeatures from "../../components/WorkFeatures/WorkFeatures";
+import Innovation from "../../components/Innovation/Innovation";
 import About from "../../components/About/About";
-import Services from "../../components/Services/Services";
-import Project from "../../components/Projects/Project";
+import Owlets from '../../components/Owlets/Owlets';
 import Footer from "../../components/Footer/Footer";
 
 const HomePage = () => {
-  return (
-    <>
-      <Hero />
-      <About />
-      <Services />
-      <Project />
-    </>
-  )
-}
+	return (
+		<>
+			<Hero />
+			<About />
+			<Innovation />
+			<Owlets />
+		</>
+	);
+};
 
-export default HomePage
+export default HomePage;
