@@ -1,0 +1,164 @@
+import line from "../../assets/images/hero-line.svg"
+import './Project.css'
+
+import {
+	BsFillCaretRightFill,
+	BsFillCaretLeftFill,
+} from "react-icons/bs"
+import { motion } from "framer-motion"
+import { useRef, useState, useEffect } from "react"
+import projects from "../../utils/projects"
+import ProjectItem from "./ProjectItem/ProjectItem"
+
+const Project = () => {
+	const [width, setWidth] = useState(0)
+	const carousel = useRef()
+	useEffect(() => {
+		setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
+	}, [])
+
+
+	return (
+		<div className="row py-5" id="owlets">
+			<div className="col-12">
+				<h1 className="little-title ps-5 w-700">MY PROJECTS</h1>
+				<img src={line} alt="small-line" className="img-fluid ps-5" />
+				<h3 className="ps-5 sub-heading">
+					Some of my latest work <br /> that makes me proud
+				</h3>
+				{/* <div className="filter-container ms-5 mt-2 sub-heading">
+					<span className="pointer">All</span> /{" "}
+					<span className="pointer">Tech</span> /{" "}
+					<span className="pointer">Archi</span> /{" "}
+					<span className="pointer">Consultant</span> /{" "}
+					<span className="pointer">Mentorship</span>
+				</div> */}
+			</div>
+			{/* work item start*/}
+			<div className="col-xl-10 col-lg-11 col-md-11 col-sm-12 mt-3 mx-auto carousel-container position-relative">
+				<BsFillCaretLeftFill className="position-absolute top-50 start-0 translate-middle fs-2 maroon-text" />
+				<motion.div
+					className="carousel"
+					ref={carousel}
+					whileTap={{ cursor: "grabbing" }}
+				>
+					<motion.div
+						drag="x"
+						dragConstraints={{ right: 0, left: -width }}
+						className="work-inner-slide"
+					>
+						{projects.map((project, index) => {
+							return (
+								<motion.div className="item" key={index}>
+									<ProjectItem {...project} />
+								</motion.div>
+							)
+						})}
+					</motion.div>
+				</motion.div>
+				<BsFillCaretRightFill className="position-absolute top-50 start-100 translate-middle fs-2 maroon-text" />
+			</div>
+			{/* work item end */}
+		</div>
+	)
+}
+
+export default Project
+
+
+import "./Innovation.css";
+import ServiceItem from './ServiceItem/ServiceItem';
+import projects from '../../utils/projects';
+
+const Innovation = () => {
+	const projects = [
+		"Soothe",
+		"RoadBill",
+		"PointSub",
+		"BlackGold",
+	];
+	return (
+		<div className='row py-5 bg-black' id='innovation'>
+			<div className='col-12'>
+				<div className='row'>
+					<div className='mx-auto col-xl-6 col-lg-6 col-md-8 col-sm-10'>
+						<p className='text-light text-center fs-6'>
+							"My dreams are vast, challenging, and
+							sometimes daunting, yet entirely attainable.
+							At the core of my aspirations lies a
+							deep-seated commitment: to craft solutions
+							that embody unparalleled creativity,
+							futuristic innovation, and unwavering
+							sustainability. These principles serve as
+							guiding beacons illuminating my path in all
+							endeavors."
+						</p>
+					</div>
+				</div>
+				{/* card start */}
+				<div className='row p-4 mt-5'>
+					{projects.map((project, index) => (
+						<ServiceItem name={project} key={index} />
+					))}
+				</div>
+				{/* card end */}
+				{/* contact start */}
+				<div className='row'>
+					<p className='text-light text-center'>
+						Feel free to reach out to me for further details
+						on these innovative solutions.
+					</p>
+				</div>
+				{/* contact end */}
+			</div>
+		</div>
+	);
+};
+
+export default Innovation;
+
+
+<div className='col-xl-8 col-lg-8 col-md-12 px-md-4 col-sm-12 mx-auto pt-5'>
+				<nav
+					id='navbar-example2'
+					className='navbar px-3 mb-3 row'
+				>
+					<a
+						className='navbar-brand text-light hero-title fs-3 text-center'
+						href='#'
+					>
+						Innovations
+					</a>
+					<ul className='nav nav-pills d-flex justify-content-center'>
+						{projects.map((menu, index) => (
+							<li className='nav-item' key={index}>
+								<a 
+									className='nav-link text-light px-2 text-center'
+									href='#scrollspyHeading1'
+								>
+									{menu}
+								</a>
+							</li>
+						))}
+					</ul>
+				</nav>
+				<div
+					data-bs-spy='scroll'
+					data-bs-target='#navbar-example2'
+					data-bs-root-margin='0px 0px -40%'
+					data-bs-smooth-scroll='true'
+					className='scrollspy-example bg-body-tertiary p-3 rounded-2'
+					tabIndex='0'
+				>
+					<h4 id='scrollspyHeading1'>First heading</h4>
+					<p>...</p>
+					<h4 id='scrollspyHeading2'>Second heading</h4>
+					<p>...</p>
+					<h4 id='scrollspyHeading3'>Third heading</h4>
+					<p>...</p>
+					<h4 id='scrollspyHeading4'>Fourth heading</h4>
+					<p>...</p>
+					<h4 id='scrollspyHeading5'>Fifth heading</h4>
+					<p>...</p>
+				</div>
+			</div>

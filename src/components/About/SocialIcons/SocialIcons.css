@@ -2,14 +2,14 @@
 	text-decoration: none;
 	color: gray;
 	display: inline-block;
-	margin: 10px 10px;
+	/* margin: 10px 10px; */
 	font-size: medium;
 }
 .linkedin:hover {
 	color: #0077b5;
 }
 .github:hover {
-	color: black;
+	color: white;
 }
 .instagram:hover {
 	color: #e1306c;

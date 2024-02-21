@@ -1,34 +1,44 @@
 import "./Hero.css";
 import hero_line from "../../assets/images/hero-line.svg";
 import "animate.css";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import SocialIcons from '../About/SocialIcons/SocialIcons';
+
 
 const Hero = () => {
+	const [heroWord, setHeroWord] = useState(0);
+	const heroWords = [
+		"Software Engineer",
+		"Design Engineer",
+		"Tech Mentor",
+		"Life-Long Learner",
+		"Technopreneur",
+	];
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setHeroWord(
+				(prevIndex) => (prevIndex + 1) % heroWords.length
+			);
+		}, 2000);
+		return () => clearInterval(interval);
+	}, [heroWords.length]);
 	return (
-		<div className="row hero-page white-bg p-5" id="hero">
-			<div className="col-12 hero-container">
-				<div className="hero-content">
-					<h1 className="d-flex justify-content-between align-items-center hero-name">
-						
-						<img src={hero_line} alt="enadot_hero_line" className="img-fluid" />
+		<div className='row hero-page white-bg' id='hero'>
+			<div className='col-xg-6 col-lg-6 col-md-12 col-sm-12 hero-container-content'>
+				<div className='hero-content'>
+					<h1 className='hero-title text-light m-0 p-0'>
+						Bede E. Hampo
 					</h1>
-					<h1 className="hero-title py-2 lh-sm">
-						FUTURISTIC, UNIQUE AND SUSTAINABLE{" "}
-						<span className="maroon-text">SOLUTIONS...</span>
-					</h1>
-					<p className="fs-6 white-text">
-						I am Bede E. Hampo. A Fullstack Developer & Design Engineer{" "}
-						available for business and collaboration, worldwide.
+					<p className='fs-5 white-text m-0 p-0 sub-title'>
+						Engineer, Innovator, Mentor
 					</p>
-					<a
-						href="tel:+2347065896334"
-						className="fw-bold btn custom-btn-1 fs-6"
-					>
-						Give me a call &#8594;
-					</a>
+					<SocialIcons />
 				</div>
 			</div>
+			<div className='col-6 hero-container'></div>
 		</div>
-	)
+	);
 }
 
 export default Hero

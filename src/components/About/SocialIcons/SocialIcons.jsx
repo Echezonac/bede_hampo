@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 const SocialIcons = () => {
 	return (
-		<div className="mt-3">
+		<div className="m-0 p-0">
 			<Link
 				to="https://www.linkedin.com/in/hampoechebede"
 				className="social-icon linkedin"
@@ -14,7 +14,7 @@ const SocialIcons = () => {
 			</Link>
 			<Link
 				to="https://github.com/Echezonac"
-				className="social-icon github"
+				className="social-icon mx-3 github"
 				target="_blank"
 			>
 				<BsGithub />
