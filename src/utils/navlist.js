@@ -8,8 +8,8 @@ export const navList = [
 		link: "#innovation",
 	},
 	{
-		name: "Owlets",
-		link: "#owlets",
+		name: "Owleets",
+		link: "#owleets",
 	},
 	{
 		name: "YaG",

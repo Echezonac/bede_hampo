@@ -1,41 +1,14 @@
-import testImg from "../../../assets/images/upload.jpeg";
+import img1 from "../../../assets/images/coming-soon.jpeg"
 const snapShots = [
-	{
-		date: "24-10-2024",
-		location: "Virtual",
-		image: testImg,
-		description: "Mentorship Session with John Mike",
-	},
-	{
-		date: "24-10-2024",
-		location: "Virtual",
-		image: testImg,
-		description: "Mentorship Session with John Mike",
-	},
-	{
-		date: "24-10-2024",
-		location: "Virtual",
-		image: testImg,
-		description: "Mentorship Session with John Mike",
-	},
-	{
-		date: "24-10-2024",
-		location: "Virtual",
-		image: testImg,
-		description: "Mentorship Session with John Mike",
-	},
-	{
-		date: "24-10-2024",
-		location: "Virtual",
-		image: testImg,
-		description: "Mentorship Session with John Mike",
-	},
-	{
-		date: "24-10-2024",
-		location: "Virtual",
-		image: testImg,
-		description: "Mentorship Session with John Mike",
-	},
+	img1,
+	img1,
+	img1,
+	img1,
+	img1,
+	img1,
+	img1,
+	img1,
+	img1,
 ];
 
 export default snapShots;

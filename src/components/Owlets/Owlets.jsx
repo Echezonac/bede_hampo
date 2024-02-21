@@ -3,12 +3,27 @@ import "./Owlets.css";
 import { reasonContent } from "./ProjectItem/Content";
 import snapShots from "./ProjectItem/SnapShot";
 import { useState } from "react";
-import OwletItem from './ProjectItem/OwletItem';
+import OwletItem from "./ProjectItem/OwletItem";
 
 const Owlets = () => {
 	const [data, setData] = useState(snapShots);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [postsPerPage] = useState(4);
+	  const [postsPerPage, setPostsPerPage] = useState(
+			getPostsPerPage()
+		);
+
+		function getPostsPerPage() {
+			if (window.innerWidth >= 992) {
+				return 4;
+			} else if (window.innerWidth >= 768) {
+				return 2;
+			} else {
+				return 1;
+			}
+		}
+
+		window.onresize = () =>
+			setPostsPerPage(getPostsPerPage());
 
 	// useEffect(() => {
 	// 	// const fetchData = async () => {
@@ -18,10 +33,10 @@ const Owlets = () => {
 	// 	// 	const jsonData = await response.json();
 	// 	// 	setData(jsonData);
 	// 	// };
-    //     setData(snapShots);
+	//     setData(snapShots);
 	// 	// fetchData();
 	// }, []);
-	
+
 	const indexOfLastPost = currentPage * postsPerPage;
 	const indexOfFirstPost = indexOfLastPost - postsPerPage;
 	const currentPosts = data.slice(
@@ -33,39 +48,44 @@ const Owlets = () => {
 		setCurrentPage(pageNumber);
 
 	return (
-		<div className='row py-5' id='owlets'>
+		<div className='row py-5 px-custom' id='owlets'>
 			<div className='col-12'>
-				<h1 className='ps-5 fs-1 hero-title'>Owlets</h1>
-				<img
-					src={line}
-					alt='small-line'
-					className='img-fluid ps-5'
-				/>
-				<p className='ps-5 fw-bold'>
-					"Tell me and I forget, teach me and I may
-					remember, involve me and I learn." - Benjamin
-					Franklin
+				<h1 className='fs-3 hero-title'>Owleets</h1>
+				<p className='fw-bold'>
+					"Experience-Driven Learning: Empowering Juniors to
+					Learn by Doing"
 				</p>
-				<p className='px-5 text-justify'>{reasonContent}</p>
+				<p className='text-justify'>{reasonContent}</p>
 			</div>
 			{/* snapshot start */}
-			<div className='col-12 px-5'>
-				<div className='row'>
+			<div className='col-12 mt-4'>
+				<div className='row mb-4'>
 					{currentPosts.map((item, index) => (
 						<OwletItem key={index} item={item} />
 					))}
 				</div>
 				<div className='row'>
-					{Array.from({
-						length: Math.ceil(data.length / postsPerPage),
-					}).map((_, index) => (
-						<button className='d-inline btn btn-maroon text-light'
-							key={index}
-							onClick={() => paginate(index + 1)}
-						>
-							{index + 1}
-						</button>
-					))}
+					<div
+						className='mx-auto d-flex'
+						style={{ width: "fit-content" }}
+					>
+						{Array.from({
+							length: Math.ceil(data.length / postsPerPage),
+						}).map((_, index) => (
+							<button
+								className={`custom-btn d-block mx-2 text-light ${
+									currentPage === index + 1
+										? "active-btn"
+										: ""
+								}`}
+								style={{ width: "40px" }}
+								key={index}
+								onClick={() => paginate(index + 1)}
+							>
+								{index + 1}
+							</button>
+						))}
+					</div>
 				</div>
 			</div>
 			{/* snapshot end */}

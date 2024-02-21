@@ -1,48 +1,66 @@
 import "./Innovation.css";
-import ServiceItem from './ServiceItem/ServiceItem';
-import projects from '../../utils/projects';
+import InnovationItem from "./InnovationItem/InnovationItem";
+import Innovations from "../../utils/innovations";
+import { useState } from 'react';
 
 const Innovation = () => {
-	const projects = [
-		"Soothe",
-		"RoadBill",
-		"PointSub",
-		"BlackGold",
-	];
+	const [selectedItem, setSelectedItem] = useState(
+		Innovations[0]
+	);
+	const handleItemClick = (item) => {
+		setSelectedItem(item);
+	};
 	return (
-		<div className='row py-5 bg-black' id='innovation'>
+		<div className='row py-5 px-custom' id='innovation'>
+			{/* heading start */}
 			<div className='col-12'>
 				<div className='row'>
-					<div className='mx-auto col-xl-6 col-lg-6 col-md-8 col-sm-10'>
-						<p className='text-light text-center fs-6'>
-							"My dreams are vast, challenging, and
-							sometimes daunting, yet entirely attainable.
-							At the core of my aspirations lies a
-							deep-seated commitment: to craft solutions
-							that embody unparalleled creativity,
-							futuristic innovation, and unwavering
-							sustainability. These principles serve as
-							guiding beacons illuminating my path in all
-							endeavors."
-						</p>
+					{/* section title  start*/}
+					<div className='col-xl-6 col-lg-6 col-md-3 col-sm-12 mb-2'>
+						<h3 className='hero-title fs-3'>
+							Innovations
+						</h3>
 					</div>
+					{/* section title end */}
+					{/* section menu start*/}
+					<div className='col-xl-6 col-lg-6 col-md-9 col-sm-12 d-flex justify-content-center align-items-center'>
+						<ul
+							className='my-auto mx-auto d-flex align-items-around'
+							style={{ width: "fit-content" }}
+						>
+							{Innovations.map((menu, index) => (
+								<li key={index} className='px-2'>
+									<p
+										onClick={() => handleItemClick(menu)}
+										className='text-decoration-none text-dark text-center'
+									>
+										{menu.name}
+									</p>
+								</li>
+							))}
+						</ul>
+					</div>
+					{/* section menu end */}
 				</div>
-				{/* card start */}
-				<div className='row p-4 mt-5'>
-					{projects.map((project, index) => (
-						<ServiceItem name={project} key={index} />
-					))}
-				</div>
-				{/* card end */}
-				{/* contact start */}
-				<div className='row'>
-					<p className='text-light text-center'>
-						Feel free to reach out to me for further details
-						on these innovative solutions.
-					</p>
-				</div>
-				{/* contact end */}
 			</div>
+			{/* heading end */}
+			{/* content start */}
+			<div className='col-12 mt-3'>
+				{Innovations.map((item, index) => (
+					<div
+						className='row my-3'
+						style={{
+							display:
+								selectedItem.id === item.id
+									? "flex"
+									: "none",
+						}}
+					>
+						<InnovationItem item={item} key={index} />
+					</div>
+				))}
+			</div>
+			{/* content end */}
 		</div>
 	);
 };

@@ -64,3 +64,101 @@ const Project = () => {
 }
 
 export default Project
+
+
+import "./Innovation.css";
+import ServiceItem from './ServiceItem/ServiceItem';
+import projects from '../../utils/projects';
+
+const Innovation = () => {
+	const projects = [
+		"Soothe",
+		"RoadBill",
+		"PointSub",
+		"BlackGold",
+	];
+	return (
+		<div className='row py-5 bg-black' id='innovation'>
+			<div className='col-12'>
+				<div className='row'>
+					<div className='mx-auto col-xl-6 col-lg-6 col-md-8 col-sm-10'>
+						<p className='text-light text-center fs-6'>
+							"My dreams are vast, challenging, and
+							sometimes daunting, yet entirely attainable.
+							At the core of my aspirations lies a
+							deep-seated commitment: to craft solutions
+							that embody unparalleled creativity,
+							futuristic innovation, and unwavering
+							sustainability. These principles serve as
+							guiding beacons illuminating my path in all
+							endeavors."
+						</p>
+					</div>
+				</div>
+				{/* card start */}
+				<div className='row p-4 mt-5'>
+					{projects.map((project, index) => (
+						<ServiceItem name={project} key={index} />
+					))}
+				</div>
+				{/* card end */}
+				{/* contact start */}
+				<div className='row'>
+					<p className='text-light text-center'>
+						Feel free to reach out to me for further details
+						on these innovative solutions.
+					</p>
+				</div>
+				{/* contact end */}
+			</div>
+		</div>
+	);
+};
+
+export default Innovation;
+
+
+<div className='col-xl-8 col-lg-8 col-md-12 px-md-4 col-sm-12 mx-auto pt-5'>
+				<nav
+					id='navbar-example2'
+					className='navbar px-3 mb-3 row'
+				>
+					<a
+						className='navbar-brand text-light hero-title fs-3 text-center'
+						href='#'
+					>
+						Innovations
+					</a>
+					<ul className='nav nav-pills d-flex justify-content-center'>
+						{projects.map((menu, index) => (
+							<li className='nav-item' key={index}>
+								<a 
+									className='nav-link text-light px-2 text-center'
+									href='#scrollspyHeading1'
+								>
+									{menu}
+								</a>
+							</li>
+						))}
+					</ul>
+				</nav>
+				<div
+					data-bs-spy='scroll'
+					data-bs-target='#navbar-example2'
+					data-bs-root-margin='0px 0px -40%'
+					data-bs-smooth-scroll='true'
+					className='scrollspy-example bg-body-tertiary p-3 rounded-2'
+					tabIndex='0'
+				>
+					<h4 id='scrollspyHeading1'>First heading</h4>
+					<p>...</p>
+					<h4 id='scrollspyHeading2'>Second heading</h4>
+					<p>...</p>
+					<h4 id='scrollspyHeading3'>Third heading</h4>
+					<p>...</p>
+					<h4 id='scrollspyHeading4'>Fourth heading</h4>
+					<p>...</p>
+					<h4 id='scrollspyHeading5'>Fifth heading</h4>
+					<p>...</p>
+				</div>
+			</div>
