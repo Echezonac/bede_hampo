@@ -40,10 +40,12 @@ p {
 	font-family: "Abril Fatface", cursive;
 }
 
-
+.btn-link:hover{
+	
+}
 .hero-title {
 	font-weight: 300;
-	font-size: 4rem;
+	font-size: 5vw;
 	font-family: var(--hFont);
 	text-transform: uppercase;
 }
