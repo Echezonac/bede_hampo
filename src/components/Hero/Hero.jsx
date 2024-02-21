@@ -30,13 +30,12 @@ const Hero = () => {
 					<h1 className='hero-title text-light m-0 p-0'>
 						Bede E. Hampo
 					</h1>
-					<p className='fs-5 white-text m-0 p-0 sub-title'>
+					<p className='white-text m-0 p-0'>
 						Engineer, Innovator, Mentor
 					</p>
 					<SocialIcons />
 				</div>
 			</div>
-			<div className='col-6 hero-container'></div>
 		</div>
 	);
 }
