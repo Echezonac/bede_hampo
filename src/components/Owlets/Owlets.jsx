@@ -48,7 +48,7 @@ const Owlets = () => {
 		setCurrentPage(pageNumber);
 
 	return (
-		<div className='row py-5 px-custom' id='owlets'>
+		<div className='row py-5 px-custom' id='owleets'>
 			<div className='col-12'>
 				<h1 className='fs-3 hero-title'>Owleets</h1>
 				<p className='fw-bold'>
