@@ -10,7 +10,7 @@ const OwletItem = ({
 			<img
 				src={item}
 				alt='Owleets'
-				className='card-content img-fluid'
+				className='card-content img-fluid shadow-sm'
 			/>
 		</div>
 	);
