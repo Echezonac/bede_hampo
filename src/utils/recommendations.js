@@ -15,7 +15,7 @@ const recommendations = [
 		image:
 			"https://media.licdn.com/dms/image/D4D03AQE5322BWG3M5Q/profile-displayphoto-shrink_100_100/0/1688935814673?e=1714608000&v=beta&t=IRU5DCBPoyy0i4jmCIhilIO5UabAl4hxodrFpvkgn6I",
 		name: "Juliet Kasiemobi Ugwu",
-		jobTitle: "Project Manager | Business Executive",
+		jobTitle: "Project Manager",
 		date: "July 27, 2023",
 		content:
 			"I highly recommend Bede Hampo as a software developer. I had the pleasure of working with him at Enadot Solutions in 2022. Bede's technical prowess and problem-solving abilities were impressive. He consistently delivered high-quality code, with great attention to detail and always met project deadlines. Bede's collaborative nature and excellent communication skills made him a valuable team player. His dedication to continuous learning and staying up-to-date with industry trends showcased his commitment to personal and professional growth. Without a doubt, Bede is an outstanding software developer, and I wholeheartedly recommend him for any software development role.",
@@ -37,7 +37,7 @@ const recommendations = [
 		image:
 			"https://media.licdn.com/dms/image/D4E03AQFyxD1zowh6WQ/profile-displayphoto-shrink_100_100/0/1700141837992?e=1714608000&v=beta&t=4Xbt0yI35PhcRiL26TkiOwhtJwRND1lIjywep7xeh2g",
 		name: "Blessing Gabrielle Eneji",
-		jobTitle: "Sales & Marketing Communicator...",
+		jobTitle: "Luxury Realtor",
 		date: "July 13, 2023",
 		content:
 			"Bede E. Hanpo is a remarkable colleague in the tech department. I have worked closely with Bede and have been consistently impressed by his outstanding technical skills, dedication, and remarkable contributions to the company. Bede is an exceptional tech professional who possesses a deep understanding of complex technical concepts and a natural ability to solve intricate problems. His strong analytical skills, combined with meticulous attention to detail, have consistently resulted in the successful completion of challenging projects. Bede's commitment to delivering high-quality work has had a significant impact on the tech team's success.",
