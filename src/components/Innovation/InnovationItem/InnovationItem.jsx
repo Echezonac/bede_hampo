@@ -14,13 +14,13 @@ const InnovationItem = ({ item }) => {
 			<div className='col-xl-6 col-lg-6 col-md-12 col-sm-12 ps-xl-5 ps-lg-5'>
 				<h6 className='hero-title fs-5'>
 					<b>{name}</b> - {caption} <br />
-					<small className='fw-bold'>
-						Status:{" "}
-						<span className='maroon-text'>{status}</span>
-					</small>
 				</h6>
+				<small className='fw-bold'>
+					Status:{" "}
+					<span className='maroon-text'>{status}</span>
+				</small>
 				<p className='text-justify my-2'>{description}</p>
-				<a className='btn custom-btn' href={link}>
+				<a className='btn custom-btn mt-2' href={link}>
 					Know more
 				</a>
 			</div>

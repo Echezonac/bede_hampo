@@ -12,8 +12,8 @@ export const navList = [
 		link: "#owleets",
 	},
 	{
-		name: "YaG",
-		links: "#recommendation",
+		name: "Recommendations",
+		link: "#recommendation",
 	},
 	{
 		name: "Newsletter",

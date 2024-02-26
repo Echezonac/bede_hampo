@@ -1,12 +1,10 @@
-import line from "../../assets/images/hero-line.svg";
-import "./Owlets.css";
-import { reasonContent } from "./ProjectItem/Content";
-import snapShots from "./ProjectItem/SnapShot";
+import "./Recommendations.css";
 import { useState } from "react";
-import OwletItem from "./ProjectItem/OwletItem";
+import Card from "./Card/WorkCard";
+import recommends from "../../utils/recommendations";
 
-const Owlets = () => {
-	const [data, setData] = useState(snapShots);
+const Recommendations = () => {
+	const [data, setData] = useState(recommends);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [postsPerPage, setPostsPerPage] = useState(
 		getPostsPerPage()
@@ -14,7 +12,7 @@ const Owlets = () => {
 
 	function getPostsPerPage() {
 		if (window.innerWidth >= 992) {
-			return 4;
+			return 3;
 		} else if (window.innerWidth >= 768) {
 			return 2;
 		} else {
@@ -62,19 +60,17 @@ const Owlets = () => {
 		setCurrentPage(pageNumber);
 
 	return (
-		<div className='row py-5 px-custom' id='owleets'>
+		<div className='row py-5 px-custom' id='recommendation'>
 			<div className='col-12'>
-				<h1 className='fs-3 hero-title'>Owleets</h1>
+				<h1 className='fs-3 hero-title'>Recommendations</h1>
 				<p className='fw-bold'>
-					"Experience-Driven Learning: Empowering Juniors to
-					Learn by Doing"
+					"What people say about me"
 				</p>
-				<p className='text-justify'>{reasonContent}</p>
 			</div>
 			<div className='col-12 mt-4'>
 				<div className='row mb-4'>
 					{currentPosts.map((item, index) => (
-						<OwletItem key={index} item={item} />
+						<Card key={index} item={item} />
 					))}
 				</div>
 				<div className='row'>
@@ -103,4 +99,4 @@ const Owlets = () => {
 	);
 };
 
-export default Owlets;
+export default Recommendations;
