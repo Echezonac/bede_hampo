@@ -15,7 +15,7 @@ const recommendations = [
 		image:
 			"https://media.licdn.com/dms/image/D4D03AQE5322BWG3M5Q/profile-displayphoto-shrink_100_100/0/1688935814673?e=1714608000&v=beta&t=IRU5DCBPoyy0i4jmCIhilIO5UabAl4hxodrFpvkgn6I",
 		name: "Juliet Kasiemobi Ugwu",
-		jobTitle: "Project Manager|Business Executive",
+		jobTitle: "Project Manager",
 		date: "July 27, 2023",
 		content:
 			"I highly recommend Bede Hampo as a software developer. I had the pleasure of working with him at Enadot Solutions in 2022. Bede's technical prowess and problem-solving abilities were impressive. He consistently delivered high-quality code, with great attention to detail and always met project deadlines. Bede's collaborative nature and excellent communication skills made him a valuable team player. His dedication to continuous learning and staying up-to-date with industry trends showcased his commitment to personal and professional growth. Without a doubt, Bede is an outstanding software developer, and I wholeheartedly recommend him for any software development role.",
