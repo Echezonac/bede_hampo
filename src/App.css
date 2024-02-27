@@ -34,6 +34,14 @@ p {
 	font-family: var(--hFont);
 }
 
+@media (min-width:992px) {
+	.p{
+	font-size: 30px;
+}
+}
+
+
+
 .active-btn {
   background-color: black;
   color: white !important;
@@ -46,12 +54,10 @@ p {
 	font-family: "Abril Fatface", cursive;
 }
 
-.btn-link:hover{
-	
-}
+
 .hero-title {
 	font-weight: 300;
-	font-size: 5vw;
+	font-size: 7vw;
 	font-family: var(--hFont);
 	text-transform: uppercase;
 }
@@ -162,6 +168,10 @@ small{
 
 .white-bg {
 	background-color: var(--ltColor);
+}
+
+.black-bg{
+	background-color: #000000;
 }
 
 .custom-btn {

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Carousel.css"
 
 const Carousel = ({ imgs }) => {
 	return (
@@ -30,7 +31,7 @@ const Carousel = ({ imgs }) => {
 					>
 						<img
 							src={img}
-							className='d-block w-100'
+							className='d-block w-100 rounded'
 							alt={`Slide ${index + 1}`}
 						/>
 					</div>

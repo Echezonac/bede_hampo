@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./WorkCard.css"; // Import your CSS file for custom styles
 
 const WorkCard = ({ item }) => {
 	const { name, jobTitle, date, content, image, link } =
@@ -9,7 +10,7 @@ const WorkCard = ({ item }) => {
 	// Function to toggle the expanded state
 	const toggleExpand = () => {
 		setExpanded(!expanded);
-		 setCardHeight(expanded ? "auto" : "600px");
+		setCardHeight(expanded ? "auto" : "630px");
 	};
 
 	// Function to truncate content to first 10 words
@@ -23,8 +24,10 @@ const WorkCard = ({ item }) => {
 				className='card shadow-sm'
 				style={{ height: cardHeight }}
 			>
-				<div className='card-body'>
-					<div className='d-flex align-items-center'>
+				<div className='card-body d-flex flex-column'>
+					<div className='d-flex align-items-center mb-auto'>
+						{" "}
+						{/* Use flex-column and mb-auto to align the top part at the top and the button at the bottom */}
 						<img
 							src={image}
 							alt='Profile'
@@ -57,7 +60,7 @@ const WorkCard = ({ item }) => {
 							href={link}
 							target='_blank'
 							rel='noopener noreferrer'
-							className='btn btn-dark'
+							className='btn btn-dark align-self-end' // Align the button to the end (bottom) of the card
 						>
 							Verify
 						</a>
