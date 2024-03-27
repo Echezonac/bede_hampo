@@ -1,66 +1,67 @@
+import React, { useState } from "react";
 import "./Innovation.css";
-import InnovationItem from "./InnovationItem/InnovationItem";
-import Innovations from "../../utils/innovations";
-import { useState } from 'react';
+import projects from "../../utils/innovations";
 
 const Innovation = () => {
-	const [selectedItem, setSelectedItem] = useState(
-		Innovations[0]
-	);
-	const handleItemClick = (item) => {
-		setSelectedItem(item);
+	const [activeIndex, setActiveIndex] = useState(0); // State to track active index
+	const [menuOpen, setMenuOpen] = useState(false); // State to track menu open/close
+
+	const handleClick = (index) => {
+		setActiveIndex(index);
+		// Close the menu after selecting an item (optional)
+		setMenuOpen(false);
 	};
+
+	const handleMenuToggle = () => {
+		setMenuOpen(!menuOpen);
+	};
+
 	return (
-		<div className='row py-5 px-custom' id='innovation'>
-			{/* heading start */}
-			<div className='col-12'>
-				<div className='row'>
-					{/* section title  start*/}
-					<div className='col-xl-6 col-lg-6 col-md-3 col-sm-12 mb-2'>
-						<h3 className='hero-title fs-3'>
-							Innovations
-						</h3>
-					</div>
-					{/* section title end */}
-					{/* section menu start*/}
-					<div className='col-xl-6 col-lg-6 col-md-9 col-sm-12 d-flex justify-content-center align-items-center'>
-						<ul
-							className='my-auto mx-auto d-flex align-items-around'
-							style={{ width: "fit-content" }}
+		<div className='container'>
+			<div className='row mt-custom py-5' id='innovation'>
+				<div className='col-12'>
+					<h5 className='title text-light mb-4'>
+						Transforming Imagination into Impactful
+						Solutions:
+					</h5>
+					<p className='text-light mb-4 text-justify'>
+						Everyday problems spark wild ideas. Here's where
+						I build them into reality.
+					</p>
+				</div>
+				<div className='col-12'>
+					<div className='card bg-dark p-3'>
+						{/* Hamburger menu icon for smaller screens */}
+						<div
+							className='menu-icon'
+							onClick={handleMenuToggle}
 						>
-							{Innovations.map((menu, index) => (
-								<li key={index} className='px-2'>
-									<p
-										onClick={() => handleItemClick(menu)}
-										className='text-decoration-none text-dark text-center'
-									>
-										{menu.name}
-									</p>
+							&#9776;
+						</div>
+						{/* menu start */}
+						<ul
+							className={`menu-list ${
+								menuOpen ? "open" : ""
+							}`}
+						>
+							{projects.map((project, index) => (
+								<li
+									key={index}
+									className={
+										index === activeIndex ? "active" : ""
+									}
+									onClick={() => handleClick(index)}
+								>
+									<a href='#' className='text-light'>
+										{project.name}
+									</a>
 								</li>
 							))}
 						</ul>
+						{/* menu end */}
 					</div>
-					{/* section menu end */}
 				</div>
 			</div>
-			{/* heading end */}
-			{/* content start */}
-			<div className='col-12 mt-3'>
-				{Innovations.map((item, index) => (
-					<div
-						className='row my-3'
-						style={{
-							display:
-								selectedItem.id === item.id
-									? "flex"
-									: "none",
-						}}
-					>
-						<InnovationItem item={item} key={index} />
-					</div>
-				))}
-			</div>
-			{/* content end */}
 		</div>
 	);
 };

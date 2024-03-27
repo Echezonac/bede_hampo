@@ -1,102 +1,67 @@
-import line from "../../assets/images/hero-line.svg";
 import "./Owlets.css";
-import { reasonContent } from "./ProjectItem/Content";
-import snapShots from "./ProjectItem/SnapShot";
-import { useState } from "react";
-import OwletItem from "./ProjectItem/OwletItem";
+import iconImg from "../../assets/images/knowledge-sharing.png";
+import codeImg from "../../assets/images/code.png";
 
 const Owlets = () => {
-	const [data, setData] = useState(snapShots);
-	const [currentPage, setCurrentPage] = useState(1);
-	const [postsPerPage, setPostsPerPage] = useState(
-		getPostsPerPage()
-	);
-
-	function getPostsPerPage() {
-		if (window.innerWidth >= 992) {
-			return 4;
-		} else if (window.innerWidth >= 768) {
-			return 2;
-		} else {
-			return 1;
-		}
-	}
-
-	window.onresize = () =>
-		setPostsPerPage(getPostsPerPage());
-
-	const indexOfLastPost = currentPage * postsPerPage;
-	const indexOfFirstPost = indexOfLastPost - postsPerPage;
-	const currentPosts = data.slice(
-		indexOfFirstPost,
-		indexOfLastPost
-	);
-
-	const totalPages = Math.ceil(data.length / postsPerPage);
-
-	const getPageNumbers = () => {
-		const displayPages = 5; // Change this value to adjust the number of displayed page numbers
-		const midPoint = Math.ceil(displayPages / 2);
-
-		let startPage = currentPage - midPoint + 1;
-		let endPage = currentPage + midPoint - 1;
-
-		if (startPage < 1) {
-			startPage = 1;
-			endPage = Math.min(displayPages, totalPages);
-		} else if (endPage > totalPages) {
-			endPage = totalPages;
-			startPage = Math.max(
-				1,
-				totalPages - displayPages + 1
-			);
-		}
-
-		return Array.from(
-			{ length: endPage - startPage + 1 },
-			(_, i) => startPage + i
-		);
-	};
-
-	const paginate = (pageNumber) =>
-		setCurrentPage(pageNumber);
-
 	return (
-		<div className='bg-light'>
-			<div className='row py-5 px-custom' id='owleets'>
-				<div className='col-12'>
-					<h1 className='fs-3 hero-title'>Owleets</h1>
-					<p className='fw-bold'>
-						"Experience-Driven Learning: Empowering Juniors
-						to Learn by Doing"
-					</p>
-					<p className='text-justify'>{reasonContent}</p>
-				</div>
-				<div className='col-12 mt-4'>
-					<div className='row mb-4'>
-						{currentPosts.map((item, index) => (
-							<OwletItem key={index} item={item} />
-						))}
-					</div>
+		<div className='container-fluid mt-custom py-5 '>
+			<div
+				className='row bg-maroon px-xl-5 px-lg-5 px-md-3 px-sm-0 py-5'
+				id='owleets'
+			>
+				<div className='col-xl-9 col-lg-9 col-md-10 col-sm-12 mx-auto'>
 					<div className='row'>
-						<div
-							className='mx-auto d-flex'
-							style={{ width: "fit-content" }}
-						>
-							{getPageNumbers().map((pageNumber) => (
-								<button
-									className={`rounded custom-btn d-block mx-2 text-light ${
-										currentPage === pageNumber
-											? "active-btn"
-											: ""
-									}`}
-									style={{ width: "40px" }}
-									key={pageNumber}
-									onClick={() => paginate(pageNumber)}
-								>
-									{pageNumber}
-								</button>
-							))}
+						<div className='col-12'>
+							<h2 className='page-title text-light pb-5'>
+								Mastering comes from knowledge application...
+							</h2>
+						</div>
+						<div className='col-12'>
+							<div className='card'>
+								<div className='row'>
+									<div className='col-xl-6 col-lg-6 col-md-12 col-sm-12'>
+										<img
+											src={iconImg}
+											alt='owleets'
+											className='img-fluid'
+											width={50}
+											height={50}
+										/>
+										<h5 className='sub-title mt-5 mb-3'>
+											Experiential Learning for Software
+											Engineers
+										</h5>
+										<p className=''>
+											We provide junior software engineers
+											with the opportunity to contribute to
+											real-world projects from day one.
+											They'll gain valuable experience using
+											industry-standard practices alongside
+											a supportive team of mentors. We're
+											committed to helping them grow their
+											skills and become successful software
+											engineers.
+										</p>
+										<a
+											href='https://www.linkedin.com/company/owleets/'
+											target='_blank'
+											className='d-block mb-3'
+										>
+											Find out more about owleets
+											<i className='bi bi-arrow-up-right'></i>
+										</a>
+									</div>
+									<div className='col-xl-6 col-lg-6 col-md-12 col-sm-12'>
+										<img
+											src={codeImg}
+											alt='great_software_engineer'
+											className='img-fluid rounded d-block mx-auto'
+											// height={500}
+											// width={500}
+										/>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

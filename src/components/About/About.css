@@ -1,4 +1,4 @@
-.about-page {
+/* .about-page {
 	background-image: url("../../assets/images/about-bg.svg");
 	height: fit-content;
 	background-position: center;
@@ -6,6 +6,53 @@
 	background-attachment: fixed;
 	display: flex;
 	align-items: center;
+} */
+
+.about-page p {
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 35.75px;
 }
 
+@media (max-width: 992px) {
+	.about-page p {
+		font-size: 20px;
+		line-height: 30px;
+	}
+	 .about-page h4 {
+        font-size: 35px;
+        line-height: 45.25px;
+    }
 
+    .about-page small {
+        font-size: 16px;
+        line-height: 22.75px; 
+    }
+}
+
+@media (max-width: 768px) {
+	.about-page p {
+		font-size: 16px;
+		line-height: 25px;
+	}
+	 .about-page h4 {
+        font-size: 25px;
+        line-height: 35.25px;
+    }
+
+    .about-page small {
+        font-size: 14px; 
+        line-height: 20.75px; 
+    }
+}
+
+.about-page h4 {
+	font-size: 45px;
+	font-weight: 500;
+	line-height: 56.25px;
+}
+.about-page small {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24.75px;
+}
