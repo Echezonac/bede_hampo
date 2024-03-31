@@ -20,21 +20,31 @@
 		line-height: 122.88px;
 		text-shadow: 3px 3px 3px #850000, 3px 3px 3px #850000;
 	}
-    .footer p {
-        font-size: 40px;
-        line-height: 48.67px;
-    }
+	.footer p {
+		font-size: 40px;
+		line-height: 48.67px;
+	}
 }
 
 @media (max-width: 576px) {
 	.footer-title {
-		font-size: 50px;
+		font-size: 35px;
 		line-height: 97.92px;
 		text-shadow: 2px 2px 2px #850000, 2px 2px 2px #850000;
 	}
-    .footer p {
-        font-size: 30px; 
-        line-height: 36.4px; 
-    }
+	.footer p {
+		font-size: 30px;
+		line-height: 36.4px;
+	}
+}
+
+.social-card {
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.copyright {
+	height: fit-content;
 }
 

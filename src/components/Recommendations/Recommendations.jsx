@@ -82,11 +82,11 @@ const Recommendations = () => {
 
 						<div>
 							<button
-								className='btn btn-dark'
+								className='btn btn-dark me-2'
 								onClick={() => handlePageChange("prev")}
 								disabled={currentPage === 0}
 							>
-								Previous
+								Prev
 							</button>
 							<button
 								className='btn btn-dark'
