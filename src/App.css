@@ -1,204 +1,104 @@
-/* Abril fonts */
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-/* Poppins font */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap");
-/* Rubit font */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* Dm sans */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 ::root {
-	/* --hFont: "Abril Fatface", cursive; */
-	--hFont: "Work Sans", sans-serif;
-	--subFont: "Poppins", sans-serif;
-	--pFont: "Rubik", sans-serif;
-	--altFont: "Hanken Grotesk", sans-serif;
-	--drkColor: #333333;
-	--blkColor: #000000;
-	--maroonColor: #850000;
-	--ltColor: #ffffff;
-	--txtColor: #282828;
+	--font: "DM Sans", sans-serif;
+	--blkColor: black;
+	--mrnColor: #850000;
+	--ltColor: white;
 }
-
+body {
+	background-color: black;
+}
+.bg-maroon{
+	background-color: #850000;
+}
 * {
 	font-style: normal;
+	font-family: var(--font) !important;
+}
+.mt-custom {
+	margin-top: 15vh;
+}
+.navbar-brand {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+}
+.nav-link {
+	font-size: 18px !important;
+	font-weight: 500 !important;
+	line-height: 22.5px !important;
+}
+.brand-title {
+	font-size: 92px;
+	font-weight: 500;
+	line-height: 105.8px;
+	text-shadow: 5px 5px 3px #850000, 5px 5px 3px #850000;
+}
+
+@media (max-width: 992px) {
+	.brand-title {
+		font-size: 63px;
+		line-height: 85.8px;
+		text-shadow: 3px 3px 3px #850000, 3px 3px 3px #850000;
+	}
+}
+
+@media (max-width: 768px) {
+	.brand-title {
+		font-size: 52px;
+		line-height: 65.8px;
+		text-shadow: 2px 2px 2px #850000, 2px 2px 2px #850000;
+	}
+}
+
+.brand-text {
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 35.75px;
+}
+
+@media (max-width: 992px) {
+	.brand-text {
+		font-size: 20px;
+		line-height: 30px;
+	}
+}
+
+@media (max-width: 768px) {
+	.brand-text {
+		font-size: 16px;
+		line-height: 25px;
+	}
 }
 
 ::-webkit-scrollbar {
 	width: 2px;
 }
 ::-webkit-scrollbar-thumb {
-	background: var(--ltColor);
+	background: white;
 }
 
-p {
-	font-family: var(--hFont);
+.title {
+	font-size: 64px;
+	font-weight: 500;
+	line-height: 73.6px;
 }
 
-.active-btn {
-  background-color: black;
-  color: white !important;
-}
-
-
-.about-title {
-	font-weight: 600;
-	font-size: 10vw;
-	font-family: "Abril Fatface", cursive;
-}
-
-.btn-link:hover{
-	
-}
-.hero-title {
-	font-weight: 300;
-	font-size: 5vw;
-	font-family: var(--hFont);
-	text-transform: uppercase;
-}
-
-.sub-title {
-	font-weight:100;
-	font-size: 32px;
-	line-height: 3rem;
-	color: var(--txtColor);
-	font-family: var(--hFont);
-}
-
-.px-custom{
-	margin-left: 17vw;
-	margin-right: 17vw;
-}
-
-@media (max-width:992px) {
-	.px-custom{
-	margin-left: 1vw;
-	margin-right: 1vw;
-}
-}
-
-small{
-	font-size: 12px;
-}
-
-#innovation li{
-	list-style: none;
-	border-bottom: 0.1px solid grey;
-}
-
-#innovation li:hover{
-	border-bottom: 2px solid #850000;
-}
-
-#innovation li p{
-	cursor: pointer;
-	/* font-family: var(--hFont); */
-}
-
-
-@media (max-width:767px) {
-	#innovation .hero-title{
-		text-align: center;
+@media (max-width: 992px) {
+	.title {
+		font-size: 48px;
+		line-height: 55.2px;
 	}
 }
 
-.nav-link-custom {
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 21px;
-	color: var(--txtColor);
-	font-family: var(--hFont);
-}
-
-.nav-link-custom:hover {
-	color: var(--blkColor);
-	font-weight: 700;
-}
-
-.little-title {
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 21px;
-	color: var(--txtColor);
-	font-family: var(--hFont);
-}
-
-.w-700 {
-	font-weight: 700;
-	letter-spacing: 5px;
-}
-
-.sub-heading {
-	font-family: "Abril Fatface", cursive;
-	font-weight: 600;
-}
-
-.black-text {
-	color: #000000;
-}
-
-.black-bg {
-	color: #000000;
-}
-
-.maroon-text {
-	color: #850000;
-}
-
-.btn-maroon {
-	background-color: #850000 !important;
-}
-
-.white-text {
-	color: #fff;
-}
-
-.maroon-bg {
-	background-color: var(--maroonColor);
-	width: auto;
-}
-.text-maroon {
-	color: var(--maroonColor) !important;
-}
-
-.white-bg {
-	background-color: var(--ltColor);
-}
-
-.custom-btn {
-	/* border-radius: 30px !important; */
-	color: var(--drkColor) !important;
-	background: none;
-	border: 1px solid black;
-	cursor: pointer;
-}
-.text-justify {
-	text-align: justify;
-}
-
-.left-justify {
-	text-align: left;
-}
-
-.custom-btn:hover {
-	background-color: #282828;
-	color: #ffffff !important;
-	border: none;
-}
-
-.custom-btn-1 {
-	border-radius: 30px !important;
-	color: white !important;
-	background: none;
-	border: 1px solid white;
-	text-decoration: none;
-}
-.custom-btn-1:hover {
-	background-color: white;
-	color: black !important;
-	border: none;
+@media (max-width: 768px) {
+	.title {
+		font-size: 36px;
+		line-height: 41.4px;
+	}
 }
 
 
-.custom-width {
-	width: fit-content !important;
-}
+

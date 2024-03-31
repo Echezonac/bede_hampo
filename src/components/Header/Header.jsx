@@ -3,20 +3,38 @@ import { MenuButtonWideFill } from "react-bootstrap-icons";
 import brand from "../../assets/images/logo.png";
 import "./Header.css";
 import { navList } from "../../utils/navlist";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+	const [isScrolled, setIsScrolled] = useState(false);
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+		return () =>
+			window.removeEventListener("scroll", handleScroll);
+	}, []);
+
+	const handleScroll = () => {
+		setIsScrolled(window.scrollY > 0);
+	};
+
 	return (
-		<div className='row mt-0' style={{ marginBottom: "5vh" }}>
-			<nav className='col-12 navbar navbar-expand-lg fixed-top px-3 py-3 bg-body-tertiary'>
+		<div
+			className='row mt-0'
+			style={{ marginBottom: "5vh" }}
+		>
+			<nav
+				className={`col-12  navbar navbar-expand-lg fixed-top px-3 py-3 bg-${
+					isScrolled ? "black" : ""
+				}`}
+			>
 				<div className='container-fluid'>
-					<AnchorLink
-						href='#hero'
-						className='navbar-brand text-danger'
-					>
-						<span className='sub-heading lh-sm fs-5 maroon-text ms-2'>
+					<AnchorLink href='#hero' className='navbar-brand'>
+						<span className='lh-sm fs-4  ms-2 text-light'>
 							#Bede E. Hampo
 						</span>
 					</AnchorLink>
+
 					<button
 						className='navbar-toggler'
 						type='button'
@@ -26,7 +44,7 @@ const Header = () => {
 						aria-expanded='false'
 						aria-label='Toggle navigation'
 					>
-						<MenuButtonWideFill />
+						<MenuButtonWideFill className='text-light fs-5' />
 						{/* <span className="navbar-toggler-icon"></span> */}
 					</button>
 					<div
@@ -36,14 +54,14 @@ const Header = () => {
 						<ul className='navbar-nav me-auto mb-2 mb-lg-0 mx-auto'>
 							{navList.map((nav, index) => (
 								<li
-								key={index}
+									key={index}
 									className='nav-item active mx-2'
 									data-bs-toggle='collapse'
 									data-bs-target='#navbarTogglerDemo02'
 								>
 									<AnchorLink
 										href={nav.link}
-										className='nav-link nav-link-custom'
+										className='nav-link text-light'
 										aria-current='page'
 									>
 										{nav.name}
@@ -51,10 +69,10 @@ const Header = () => {
 								</li>
 							))}
 						</ul>
-						<form className='d-flex' role='search'>
+						<form className='d-flex me-5' role='search'>
 							<a
 								href='tel:+2347065896334'
-								className='nav-item btn custom-btn mx-2'
+								className='nav-item btn btn-danger fs-5'
 							>
 								Let's talk
 							</a>

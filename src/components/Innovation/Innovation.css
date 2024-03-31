@@ -1,0 +1,62 @@
+#innovation p {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 35.75px;
+}
+
+@media screen and (max-width: 992px) {
+    #innovation p {
+        font-size: 22px;
+        line-height: 30.75px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #innovation p {
+        font-size: 18px;
+        line-height: 24.75px;
+    }
+
+    .menu-icon {
+        display: block; /* Show hamburger menu icon */
+        cursor: pointer;
+    }
+
+    .menu-list {
+        display: none; /* Hide menu items by default */
+        flex-direction: column; /* Display menu items in a column */
+        background-color: #333; /* Add background color for better visibility */
+        padding: 10px;
+    }
+
+    .menu-list.open {
+        display: flex; /* Show menu items when menu is open */
+    }
+
+    .menu-list li {
+        margin: 5px 0; /* Add vertical margin between menu items */
+    }
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-list li {
+    margin-bottom: 10px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu-list li.active {
+    border-radius: 40px;
+    padding: 10px 30px;
+    background-color: black;
+}

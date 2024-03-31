@@ -17,6 +17,6 @@ export const navList = [
 	},
 	{
 		name: "Newsletter",
-		links: "#blog",
+		link: "#blog",
 	},
 ];

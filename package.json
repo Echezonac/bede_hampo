@@ -9,6 +9,7 @@
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.11.3",
     "framer-motion": "^10.18.0",
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",

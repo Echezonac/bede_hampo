@@ -1,30 +1,38 @@
 import "./InnovationItem.css";
-import Carousel from "./Carousel";
 
-const InnovationItem = ({ item }) => {
-	const { imgs, name, status, link, description, caption } =
-		item;
+const InnovationItem = ({ innovation }) => {
+	const { img, name, status, link, description, caption } =
+		innovation;
+
 	return (
-		<>
-			{/* innovation img start */}
-			<div className='col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-5'>
-				<Carousel imgs={imgs} />
-			</div>
-			{/* innovation content start */}
-			<div className='col-xl-6 col-lg-6 col-md-12 col-sm-12 ps-xl-5 ps-lg-5'>
-				<h6 className='hero-title fs-5'>
-					<b>{name}</b> - {caption} <br />
-				</h6>
-				<small className='fw-bold'>
-					Status:{" "}
-					<span className='maroon-text'>{status}</span>
+		<div className='row pt-5 pb-5 innovate-item mx-auto'>
+			{/* about the innovation */}
+			<div className='col-xl-6 col-lg-6 col-md-12 col-sm-12'>
+				<h1>{name}</h1>
+				<small className='maroon-text fw-bold'>
+					{status}
 				</small>
-				<p className='text-justify my-2'>{description}</p>
-				<a className='btn custom-btn mt-2' href={link}>
-					Know more
-				</a>
+				<p className='text-justify' style={{
+					height: '300px'
+				}}>{description}</p>
+				<div className='d-flex mb-3'>
+					<a
+						href={link}
+						className={`btn d-block btn-outline-dark fw-bold ${
+							link === "" ? "disabled" : ""
+						}`}
+					>
+						Know More
+					</a>
+				</div>
 			</div>
-		</>
+			{/* innovation display */}
+			<div className='col-xl-6 col-lg-6 col-md-12 col-sm-12 px-4'>
+				<div class='card'>
+					<img src={img} alt='Tride' class='card-img' />
+				</div>
+			</div>
+		</div>
 	);
 };
 
