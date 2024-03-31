@@ -1,6 +1,40 @@
-.footer{
-    height:fit-content ;
+.footer-title {
+	font-size: 160px;
+	font-weight: 700;
+	line-height: 195.36px;
+	text-align: center;
+	text-shadow: 5px 5px 3px #850000, 5px 5px 3px #850000;
 }
-.footer-description{
-    text-align: justify;
+
+.footer p {
+	font-size: 70px;
+	font-weight: 700;
+	line-height: 85.47px;
+	letter-spacing: -0.04em;
+	text-align: center;
 }
+
+@media (max-width: 991px) {
+	.footer-title {
+		font-size: 90px;
+		line-height: 122.88px;
+		text-shadow: 3px 3px 3px #850000, 3px 3px 3px #850000;
+	}
+    .footer p {
+        font-size: 40px;
+        line-height: 48.67px;
+    }
+}
+
+@media (max-width: 576px) {
+	.footer-title {
+		font-size: 50px;
+		line-height: 97.92px;
+		text-shadow: 2px 2px 2px #850000, 2px 2px 2px #850000;
+	}
+    .footer p {
+        font-size: 30px; 
+        line-height: 36.4px; 
+    }
+}
+

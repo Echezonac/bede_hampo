@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./WorkCard.css"; // Import your CSS file for custom styles
 
 const WorkCard = ({ item }) => {
@@ -6,10 +6,10 @@ const WorkCard = ({ item }) => {
 		item;
 
 	return (
-		<div className='col-xl-6 col-lg-6 col-md-12 p-4 col-sm-12'>
-			<div className='card bg-dark'>
-				<i className='bi bi-quote text-light fs-1'></i>
-				<p className='text-light content-text'>{content}</p>
+		<div className='card bg-dark'>
+			<i className='bi bi-quote text-light fs-1'></i>
+			<p className='text-light content-text'>{content}</p>
+			<div className='d-flex align-items-center justify-content-between'>
 				<div className='d-flex align-items-center'>
 					<img
 						src={image}
@@ -25,6 +25,9 @@ const WorkCard = ({ item }) => {
 						</small>
 					</div>
 				</div>
+				<a href={link} target='_blank' className='text-light'>
+					view <i className='bi bi-arrow-up-right'></i>
+				</a>
 			</div>
 		</div>
 	);
