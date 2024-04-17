@@ -1,24 +1,27 @@
 import "./InnovationItem.css";
 
 const InnovationItem = ({ innovation }) => {
-	const { img, name, status, link, description, caption } =
+	const { img, name, status, link, description } =
 		innovation;
 
 	return (
-		<div className='row pt-5 pb-5 innovate-item mx-auto'>
+		<div className='row pb-5 innovate-item mx-auto'>
 			{/* about the innovation */}
 			<div className='col-xl-6 col-lg-6 col-md-12 col-sm-12'>
-				<h1>{name}</h1>
+				<h1 className='text-light'>{name}</h1>
 				<small className='maroon-text fw-bold'>
 					{status}
 				</small>
-				<p className='text-justify' style={{
-					height: '300px'
-				}}>{description}</p>
+				<p
+					className='text-justify text-light'
+					
+				>
+					{description}
+				</p>
 				<div className='d-flex mb-3'>
 					<a
 						href={link}
-						className={`btn d-block btn-outline-dark fw-bold ${
+						className={`btn d-block btn-outline-light fw-bold ${
 							link === "" ? "disabled" : ""
 						}`}
 					>
@@ -27,9 +30,9 @@ const InnovationItem = ({ innovation }) => {
 				</div>
 			</div>
 			{/* innovation display */}
-			<div className='col-xl-6 col-lg-6 col-md-12 col-sm-12 px-4'>
-				<div class='card'>
-					<img src={img} alt='Tride' class='card-img' />
+			<div className='col-xl-6 col-lg-6 col-md-12 col-sm-12 px-3'>
+				<div className='card p-0'>
+					<img src={img} alt='Tride' className='card-img' />
 				</div>
 			</div>
 		</div>

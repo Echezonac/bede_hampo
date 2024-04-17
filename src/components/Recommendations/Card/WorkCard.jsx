@@ -2,7 +2,7 @@ import React from "react";
 import "./WorkCard.css"; // Import your CSS file for custom styles
 
 const WorkCard = ({ item }) => {
-	const { name, jobTitle, date, content, image, link } =
+	const { name, jobTitle, content, image, link } =
 		item;
 
 	return (
@@ -25,8 +25,13 @@ const WorkCard = ({ item }) => {
 						</small>
 					</div>
 				</div>
-				<a href={link} target='_blank' className='text-light'>
-					view <i className='bi bi-arrow-up-right'></i>
+				<a
+					href={link}
+					target='_blank'
+					rel='noreferrer'
+					className='text-light'
+				>
+					verify <i className='bi bi-arrow-up-right'></i>
 				</a>
 			</div>
 		</div>

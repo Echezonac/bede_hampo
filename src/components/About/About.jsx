@@ -6,7 +6,6 @@ import MentorImg from "../../assets/images/mentor.png";
 import "./About.css";
 import AboutItem from "./AboutItem";
 
-
 const About = () => {
 	return (
 		<div className='container'>
@@ -20,6 +19,14 @@ const About = () => {
 						Creating solutions that are unique, futuristic,
 						and sustainable.
 					</h5>
+					<p className='text-light text-justify'>
+						I am an Engineer, Innovator and a Mentor.
+						Committed to daily improvement, human impact,
+						and sustainable innovation. Strongly believe in
+						foundations of growth, advancement, and trust.
+						Advocate for education centered on morality and
+						human resilience.
+					</p>
 				</div>
 				{/* heading end */}
 				<AboutItem
@@ -35,7 +42,7 @@ const About = () => {
 				<AboutItem
 					imageSrc={innImg}
 					title='Innovator'
-					description='Creator of Tride, RoadBill, Soothe, PointSub, and BlackGold'
+					description='Creator of Foodpot, Tride, RoadBill, and BlackGold'
 					buttonText='Learn More'
 					lgCol={6}
 					bgColor='#FFDADA'

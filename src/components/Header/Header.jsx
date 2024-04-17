@@ -72,7 +72,7 @@ const Header = () => {
 						<form className='d-flex me-5' role='search'>
 							<a
 								href='tel:+2347065896334'
-								className='nav-item btn btn-danger fs-5'
+								className='nav-item btn btn-maroon fs-5'
 							>
 								Let's talk
 							</a>
