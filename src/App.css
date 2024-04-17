@@ -13,6 +13,10 @@ body {
 .bg-maroon{
 	background-color: #850000;
 }
+.btn-maroon{
+	background-color: #850000 !important;
+	color: white;
+}
 * {
 	font-style: normal;
 	font-family: var(--font) !important;

@@ -1,24 +1,26 @@
 import React, { useState } from "react";
 import "./Innovation.css";
 import projects from "../../utils/innovations";
+import InnovationItem from "./InnovationItem/InnovationItem";
 
 const Innovation = () => {
-	const [activeIndex, setActiveIndex] = useState(0); // State to track active index
-	const [menuOpen, setMenuOpen] = useState(false); // State to track menu open/close
-
-	const handleClick = (index) => {
-		setActiveIndex(index);
-		// Close the menu after selecting an item (optional)
-		setMenuOpen(false);
+	const [activeIndex, setActiveIndex] = useState(0); 
+	
+	const handleNext = () => {
+		setActiveIndex(
+			(prevIndex) => (prevIndex + 1) % projects.length
+		);
 	};
 
-	const handleMenuToggle = () => {
-		setMenuOpen(!menuOpen);
+	const handlePrev = () => {
+		setActiveIndex((prevIndex) =>
+			prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+		);
 	};
 
 	return (
 		<div className='container'>
-			<div className='row mt-custom py-5' id='innovation'>
+			<div className='row mt-custom py-2 mb-5' id='innovation'>
 				<div className='col-12'>
 					<h5 className='title text-light mb-4'>
 						Transforming Imagination into Impactful
@@ -29,38 +31,33 @@ const Innovation = () => {
 						I build them into reality.
 					</p>
 				</div>
-				<div className='col-12'>
-					<div className='card bg-dark p-3'>
-						{/* Hamburger menu icon for smaller screens */}
-						<div
-							className='menu-icon'
-							onClick={handleMenuToggle}
-						>
-							&#9776;
-						</div>
-						{/* menu start */}
-						<ul
-							className={`menu-list ${
-								menuOpen ? "open" : ""
-							}`}
-						>
-							{projects.map((project, index) => (
-								<li
-									key={index}
-									className={
-										index === activeIndex ? "active" : ""
-									}
-									onClick={() => handleClick(index)}
-								>
-									<a href='#' className='text-light'>
-										{project.name}
-									</a>
-								</li>
-							))}
-						</ul>
-						{/* menu end */}
-					</div>
-				</div>
+				
+			</div>
+			<div className='row projects'>
+				{/* Display selected project */}
+				{projects.map((project, index) =>
+					index === activeIndex ? (
+						<InnovationItem
+							key={index}
+							innovation={project}
+						/>
+					) : null
+				)}
+			</div>
+			<div className='col-6 mx-auto d-flex justify-content-center p-0'>
+				<button
+					className='btn btn-light mr-2'
+					onClick={handlePrev}
+				>
+					Prev
+				</button>
+				&nbsp;&nbsp;
+				<button
+					className='btn btn-light'
+					onClick={handleNext}
+				>
+					Next
+				</button>
 			</div>
 		</div>
 	);

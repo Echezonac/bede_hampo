@@ -14,9 +14,5 @@ export const navList = [
 	{
 		name: "Recommendations",
 		link: "#recommendation",
-	},
-	{
-		name: "Newsletter",
-		link: "#blog",
-	},
+	}
 ];
